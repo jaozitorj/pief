@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    tools:context=".AgendaFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1000dp">
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="1000dp">
+    <View
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:translationX="15dp"
+        android:translationY="20dp"
+        android:backgroundTint="@color/laranja"
+        android:background="@drawable/login"/>
+
+       <View
+           android:layout_width="380dp"
+           android:layout_height="200dp"
+           android:translationX="15dp"
+           android:translationY="250dp"
+           android:backgroundTint="@color/verde"
+           android:background="@drawable/login"/>
+
+       <View
+           android:layout_width="380dp"
+           android:layout_height="200dp"
+           android:translationX="15dp"
+           android:translationY="480dp"
+           android:backgroundTint="@color/azul"
+           android:background="@drawable/login"/>
+
+       <View
+           android:layout_width="380dp"
+           android:layout_height="200dp"
+           android:translationX="15dp"
+           android:translationY="710dp"
+           android:backgroundTint="@color/rosa"
+           android:background="@drawable/login"/>
+
+
+   </FrameLayout>
+    </LinearLayout>
+</ScrollView>

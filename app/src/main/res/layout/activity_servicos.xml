@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".servicos">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="420dp"
+        android:layout_height="200dp"
+        android:background="@drawable/menuinicial2"
+        android:translationX="-10dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/medico"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Paulo Henrique"
+        android:translationY="-140dp"
+        android:textSize="30dp"
+        android:translationX="135dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Barbeiro"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:translationY="-145dp"
+        android:translationX="135dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medico" />
+
+    <ImageButton
+        android:id="@+id/voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+        android:translationX="10dp"
+        android:translationY="-280dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:translationY="-270dp"
+        android:background="@drawable/barbeiro"
+        android:translationX="19dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toStartOf="@+id/medico"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinza"
+        app:tabTextAppearance="@style/CustomTabLayout"
+        android:translationY="-240dp"
+        android:elevation="10dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:translationY="-230dp"
+        android:layout_height="620dp"/>
+
+</LinearLayout>

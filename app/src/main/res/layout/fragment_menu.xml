@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="900dp">
+
+            <View
+                android:layout_width="380dp"
+                android:layout_height="140dp"
+                android:translationX="15dp"
+                android:translationY="20dp"
+                android:backgroundTint="@color/cinza"
+                android:background="@drawable/view"/>
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:translationX="35dp"
+                android:text="Informação"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:translationY="35dp"/>
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:translationX="35dp"
+                android:text="A Barber Shop é única, original, a primeira de Porto Alegre. Desde 1991 a Barber Shop da Independência faz parte do cenário da cidade, cortando o cabelo de homens, mulheres e crianças."
+                android:textSize="15dp"
+                android:translationY="60dp"/>
+
+            <View
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:translationX="15dp"
+                android:translationY="170dp"
+                android:backgroundTint="@color/cinza"
+                android:background="@drawable/view"/>
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:translationX="35dp"
+                android:text="Contato"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:translationY="185dp"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:translationX="65dp"
+                android:text="+55 19 994903900"
+                android:textSize="18dp"
+                android:translationY="210dp"/>
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:translationX="65dp"
+                android:text="balvindeveloper@gmail.com"
+                android:textSize="18dp"
+                android:translationY="235dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:translationY="210dp"
+                android:translationX="40dp"
+                android:background="@drawable/ic_baseline_local_phone_24"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:translationY="236dp"
+                android:translationX="40dp"
+                android:background="@drawable/ic_baseline_email_24"/>
+
+            <View
+                android:layout_width="380dp"
+                android:layout_height="140dp"
+                android:translationX="15dp"
+                android:translationY="280dp"
+                android:backgroundTint="@color/cinza"
+                android:background="@drawable/view"/>
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:translationX="35dp"
+                android:text="Abre as"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:translationY="290dp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:translationX="35dp"
+                android:text="Segunda - Sexta"
+                android:textSize="18dp"
+                android:translationY="320dp"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:translationX="35dp"
+                android:text="Sábado"
+                android:textSize="18dp"
+                android:translationY="380dp"/>
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:translationX="215dp"
+                android:text="08:00 AM - 11:30 AM\n12:30 PM - 18:00 PM"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:translationY="320dp"/>
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="30dp"
+                android:translationX="215dp"
+                android:text="08:00 AM - 11:30 AM"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:translationY="380dp"/>
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:elevation="10dp"
+                android:background="@drawable/editlogin"
+                android:translationY="430dp"
+                android:translationX="15dp"
+                android:src="@drawable/mapa"/>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
