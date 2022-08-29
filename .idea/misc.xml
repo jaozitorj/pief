@@ -15,6 +15,7 @@
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/editlogin.xml" value="0.128" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/editlogin01.xml" value="0.1105" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/edittext.xml" value="0.128" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/ic_pesquisar.xml" value="0.111" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/login.xml" value="0.128" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/menuinicial.xml" value="0.1105" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable/procurarview.xml" value="0.111" />
@@ -32,9 +33,11 @@
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_agenda.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_menu.xml" value="0.22" />
-        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_procurar.xml" value="0.22" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_procurar.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/fragment_servicos.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/layout/item_user.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/menu/menu.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/menu/menuu.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/menu/procurar.xml" value="0.2" />
       </map>
     </option>

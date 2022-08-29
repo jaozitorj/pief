@@ -12,11 +12,12 @@
 
    <FrameLayout
        android:layout_width="match_parent"
-       android:layout_height="1000dp">
+       android:layout_height="1000dp"
+       tools:ignore="UselessParent">
     <View
         android:layout_width="380dp"
         android:layout_height="200dp"
-        android:translationX="15dp"
+        android:translationX="5dp"
         android:translationY="20dp"
         android:backgroundTint="@color/laranja"
         android:background="@drawable/login"/>
@@ -24,7 +25,7 @@
        <View
            android:layout_width="380dp"
            android:layout_height="200dp"
-           android:translationX="15dp"
+           android:translationX="5dp"
            android:translationY="250dp"
            android:backgroundTint="@color/verde"
            android:background="@drawable/login"/>
@@ -32,7 +33,7 @@
        <View
            android:layout_width="380dp"
            android:layout_height="200dp"
-           android:translationX="15dp"
+           android:translationX="5dp"
            android:translationY="480dp"
            android:backgroundTint="@color/azul"
            android:background="@drawable/login"/>
@@ -40,7 +41,7 @@
        <View
            android:layout_width="380dp"
            android:layout_height="200dp"
-           android:translationX="15dp"
+           android:translationX="5dp"
            android:translationY="710dp"
            android:backgroundTint="@color/rosa"
            android:background="@drawable/login"/>

@@ -9,18 +9,19 @@
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/procurar"
-        android:layout_width="match_parent"
+        android:layout_width="380dp"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
+        android:translationX="5dp"
         android:background="@drawable/procurarview"
         app:queryHint="Procurar..."
         app:iconifiedByDefault="false"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listadeperfil"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:translationY="75dp"
-        />
+    <ListView
+        android:id="@+id/listview"
+        android:translationY="70dp"
+        android:layout_width="380dp"
+        android:translationX="5dp"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
