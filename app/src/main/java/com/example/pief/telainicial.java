@@ -18,6 +18,7 @@ public class telainicial extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTelainicialBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        replaceFragment(new HomeFragment());
 
         binding.bottombar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

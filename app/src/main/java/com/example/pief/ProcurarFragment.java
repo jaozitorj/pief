@@ -1,6 +1,7 @@
 package com.example.pief;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.SearchView;
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -33,10 +35,19 @@ public class ProcurarFragment extends Fragment {
         arrayList.add("Paulo Henrique");
         arrayList.add("Gabriel Camargo");
 
-
         adapter = new ArrayAdapter<>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1,arrayList);
-
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0){
+                    startActivity(new Intent(requireContext(), agendamedico.class));
+                }else if (position == 1){
+                    startActivity(new Intent(requireContext(), agendamedico.class));
+                }
+            }
+        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

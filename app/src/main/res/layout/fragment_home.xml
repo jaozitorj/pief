@@ -23,6 +23,7 @@
                 android:translationY="95dp">
 
                 <TextView
+                    android:id="@+id/vertodos"
                     android:layout_width="90dp"
                     android:layout_height="30dp"
                     android:text="Ver todos"
@@ -179,7 +180,7 @@
                                 android:layout_height="80dp"
                                 android:background="@drawable/hair"
                                 android:elevation="10dp"
-                                android:translationX="-60dp"
+                                android:translationX="-70dp"
                                 android:translationY="5dp"/>
 
 
@@ -187,7 +188,7 @@
                                 android:layout_width="100dp"
                                 android:layout_height="90dp"
                                 android:background="@drawable/corner"
-                                android:translationX="-150dp" />
+                                android:translationX="-160dp" />
 
                             <TextView
                                 android:layout_width="60dp"
@@ -231,9 +232,10 @@
             android:translationX="-420dp">
 
             <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="35dp"
-                android:translationX="40dp"
+                android:id="@+id/notificacao"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:translationX="45dp"
                 android:translationY="30dp"
                 android:background="@drawable/notificacao"/>
 

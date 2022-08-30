@@ -22,7 +22,7 @@
         android:layout_marginTop="70dp"
         android:text="Paulo Henrique"
         android:textSize="30dp"
-        android:translationX="25dp"
+        android:translationX="35dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.621"
@@ -39,7 +39,6 @@
         android:textAlignment="center"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +53,7 @@
         android:textSize="20dp"
         android:textColor="@color/black"
         android:translationY="-25dp"
-        android:translationX="15dp"
+        android:translationX="14dp"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="@+id/view4"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,10 +74,10 @@
         android:layout_width="110dp"
         android:layout_height="100dp"
         android:background="@drawable/barbeiro"
-        android:translationX="19dp"
+        android:translationX="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
         app:layout_constraintEnd_toStartOf="@+id/medico"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/voltar" />
 
 
     <TextView
