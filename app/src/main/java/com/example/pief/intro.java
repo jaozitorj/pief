@@ -15,6 +15,15 @@ public class intro extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
 
         Button login = findViewById(R.id.button);
+        Button registrar = findViewById(R.id.button2);
+
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(intro.this, sigin.class);
+                startActivity(intent);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
