@@ -6,136 +6,120 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/backgorudview"
     tools:context=".sigin">
 
-
-
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="25dp"
-        app:cardCornerRadius="10dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="35dp"
-        app:cardUseCompatPadding="true"
-        android:elevation="4dp"
-        >
-        <ScrollView
+        android:layout_height="match_parent">
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="15dp"
-                >
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+            android:layout_height="match_parent"
+            android:background="@drawable/barbeiro3"/>
 
-                    <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Registrar"
-                        android:textColor="@android:color/black"
-                        android:textSize="28sp"
-                        android:textStyle="bold"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="350dp"
+            android:layout_height="490dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Nome:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-                        />
+            <EditText
+                android:id="@+id/nome"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="160dp"
+                android:background="@drawable/editlogin02"
+                android:hint="João Victor" />
 
-                    <TextView
-                        android:id="@+id/txtsignup"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="4dp"
-                        android:onClick="login"
-                        android:text="Login"
-                        android:textColor="@color/laranja"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="120dp"
+                android:text="Email:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
-                        />
-                </RelativeLayout>
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="60dp"
+                android:background="@drawable/editlogin02"
+                android:hint="barber@balvin.com" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="220dp"
+                android:text="Telefone:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/telefone"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/editlogin02"
+                android:hint="(19) 99490390" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="320dp"
+                android:text="Senha:"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
+            <EditText
+                android:id="@+id/senha"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="140dp"
+                android:background="@drawable/editlogin02"
+                android:hint="*******" />
 
+        </androidx.cardview.widget.CardView>
 
-                <EditText
-                    android:id="@+id/ednombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:hint="Nome"
-                    android:layout_marginTop="20dp"
-                    android:padding="10dp"
-                    android:background="@drawable/editlogin"
-                    android:inputType="textPersonName" />
-
-
-
-
-
-
-                <EditText
-                    android:id="@+id/etemail"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:hint="Email"
-                    android:layout_marginTop="20dp"
-                    android:padding="10dp"
-                    android:background="@drawable/editlogin"
-                    android:inputType="textEmailAddress" />
-
-
-
-
-                <EditText
-                    android:id="@+id/etcontraseña"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:ems="10"
-                    android:background="@drawable/editlogin"
-                    android:hint="Senha"
-                    android:layout_marginTop="20dp"
-                    android:padding="10dp"
-                    android:inputType="textPassword" />
-
-
-
-
-
-
-                <Button
-                    android:id="@+id/btn_register"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="30dp"
-                    android:background="@drawable/edittext2"
-                    android:layout_marginTop="32dp"
-                    android:text="Registrar"
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:visibility="invisible"
-                    android:layout_height="30dp">
-
-                </Button>
-
-            </LinearLayout>
-        </ScrollView>
+        <Button
+            android:id="@+id/registrar"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:background="@drawable/shape1"
+            android:text="REGISTRAR"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="-20dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView5"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
 
-
-
-    </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

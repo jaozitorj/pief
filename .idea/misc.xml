@@ -3,12 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_agendamedico.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/drawable-v24/shape2.xml" value="0.1415" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/drawable/shape1.xml" value="0.1415" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_agendamedico.xml" value="0.1" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_barberbolado.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_intro.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_sigin.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_notificacao.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_sigin.xml" value="0.22" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/activity_telainicial.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/fragment_agenda.xml" value="0.2" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/JoaoVictor/StudioProjects/pief/app/src/main/res/menu/menu.xml" value="0.2" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable-v24/editlogin02.xml" value="0.1105" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable-v24/edittext2.xml" value="0.128" />
         <entry key="..\:/Users/JoaoVictor/StudioProjects/pief2/app/src/main/res/drawable-v24/menuinicial2.xml" value="0.1105" />

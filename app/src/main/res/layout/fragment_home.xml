@@ -1,253 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
+    android:layout_height="1000dp"
+    android:background="@color/cinza"
     tools:context=".HomeFragment">
 
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        tools:ignore="Orientation">
+        android:layout_height="1500dp">
 
-        <FrameLayout
+
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="FEED"
+            android:textColor="@color/black"
+            android:textSize="50dp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, João"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <View
             android:layout_width="match_parent"
-            android:layout_height="900dp">
+            android:layout_height="1500dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
-            <FrameLayout
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editlogin02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="900dp"
-                android:background="@drawable/menuinicial"
-                android:translationY="95dp">
+                android:layout_height="match_parent"
+                android:background="@drawable/barber" />
 
-                <TextView
-                    android:id="@+id/vertodos"
-                    android:layout_width="90dp"
-                    android:layout_height="30dp"
-                    android:text="Ver todos"
-                    android:textSize="20dp"
-                    android:textColor="@color/vermelho"
-                    android:translationX="290dp"
-                    android:translationY="185dp" />
+        </androidx.cardview.widget.CardView>
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:text="Barbeiros"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:translationX="20dp"
-                    android:translationY="355dp" />
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Barbeiros"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cardView4"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
-                <View
-                    android:layout_width="125dp"
-                    android:layout_height="5dp"
-                    android:background="@drawable/barflutuante"
-                    android:translationX="140dp"
-                    android:translationY="10dp" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/barbeiro1"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17">
 
-                <View
-                    android:id="@+id/doutor1"
-                    android:layout_width="375dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/login"
-                    android:translationX="7dp"
-                    android:translationY="390dp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:background="@drawable/barbeiro"
+                android:layout_marginStart="10dp"/>
 
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/cabeleiro"
-                    android:translationX="35dp"
-                    android:translationY="400dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedro Alvez"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="15dp"/>
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:text="Paulo Henrique"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:translationX="130dp"
-                    android:translationY="400dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="barbeiro"
+                android:textSize="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="120dp"/>
 
-                <TextView
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:text="Barbeiro"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:translationX="130dp"
-                    android:translationY="430dp" />
+        </androidx.cardview.widget.CardView>
 
-                <View
-                    android:id="@+id/barbeiro2"
-                    android:layout_width="375dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/login"
-                    android:translationX="7dp"
-                    android:translationY="500dp" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/barbeiro2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barbeiro1">
 
-                <ImageView
-                    android:layout_width="90dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/barbeiro"
-                    android:translationX="25dp"
-                    android:translationY="505dp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:background="@drawable/barbeiro_cabelo"
+                android:layout_marginStart="10dp"/>
 
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:text="Gabriel Camargo"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:translationX="130dp"
-                    android:translationY="510dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daniel Texeira"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="15dp"/>
 
-                <TextView
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:text="Cabeleiro"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:translationX="130dp"
-                    android:translationY="540dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="barbeiro"
+                android:textSize="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginStart="120dp"/>
+
+        </androidx.cardview.widget.CardView>
 
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:text="Olá, Balvin"
-                    android:textSize="40dp"
-                    android:textStyle="bold"
-                    android:translationX="20dp"
-                    android:translationY="50dp" />
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="50dp"
-                    android:text="Bem-Vindo de voltar!"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    android:translationX="20dp"
-                    android:translationY="100dp" />
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="35dp"
-                    android:text="Categorias"
-                    android:textColor="@color/black"
-                    android:textSize="25dp"
-                    android:translationX="20dp"
-                    android:translationY="180dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-                        <LinearLayout
-                            android:layout_width="400dp"
-                            android:layout_height="120dp"
-                            android:translationY="220dp"
-                            android:orientation="horizontal">
-
-
-                            <ImageButton
-                                android:layout_width="100dp"
-                                android:layout_height="90dp"
-                                android:translationX="15dp"
-                                android:background="@drawable/corner"/>
-
-                            <ImageButton
-                                android:layout_width="100dp"
-                                android:layout_height="90dp"
-                                android:translationX="50dp"
-                                android:background="@drawable/corner"/>
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:translationY="5dp"
-                                android:background="@drawable/babeiro2"
-                                android:translationX="-40dp"/>
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:translationY="5dp"
-                                android:background="@drawable/barba"
-                                android:translationX="-255dp"/>
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/hair"
-                                android:elevation="10dp"
-                                android:translationX="-70dp"
-                                android:translationY="5dp"/>
-
-
-                            <ImageButton
-                                android:layout_width="100dp"
-                                android:layout_height="90dp"
-                                android:background="@drawable/corner"
-                                android:translationX="-160dp" />
-
-                            <TextView
-                                android:layout_width="60dp"
-                                android:layout_height="20dp"
-                                android:text="Barba"
-                                android:textAlignment="center"
-                                android:textSize="17dp"
-                                android:translationX="-510dp"
-                                android:elevation="10dp"
-                                android:translationY="95dp"/>
-
-                            <TextView
-                                android:layout_width="60dp"
-                                android:layout_height="20dp"
-                                android:text="Cabelo"
-                                android:textAlignment="center"
-                                android:textSize="17dp"
-                                android:translationX="-430dp"
-                                android:elevation="10dp"
-                                android:translationY="95dp"/>
-
-                            <TextView
-                                android:layout_width="60dp"
-                                android:layout_height="20dp"
-                                android:text="Pintura"
-                                android:textAlignment="center"
-                                android:textSize="17dp"
-                                android:translationX="-350dp"
-                                android:elevation="10dp"
-                                android:translationY="95dp"/>
-
-
-
-
-                        </LinearLayout>
-            </FrameLayout>
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="420dp"
-            android:layout_height="90dp"
-            android:translationX="-420dp">
-
-            <ImageButton
-                android:id="@+id/notificacao"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
-                android:translationX="45dp"
-                android:translationY="30dp"
-                android:background="@drawable/notificacao"/>
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:translationX="320dp"
-                android:translationY="10dp"
-                android:src="@drawable/elonmusk"
-                android:background="@drawable/view"/>
-
-        </FrameLayout>
-    </LinearLayout>
 
 </ScrollView>

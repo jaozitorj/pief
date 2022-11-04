@@ -23,17 +23,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class sigin extends AppCompatActivity {
-    EditText txtName,txtEmail,pass;
+    EditText txtName,txtEmail,pass, telefone1;
     Button btn_insert;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sigin);
 
-        txtName     = findViewById(R.id.ednombre);
-        txtEmail    = findViewById(R.id.etemail);
-        pass = findViewById(R.id.etcontraseña);
-        btn_insert = findViewById(R.id.btn_register);
+        txtName     = findViewById(R.id.nome);
+        txtEmail    = findViewById(R.id.email);
+        pass = findViewById(R.id.senha);
+        telefone1 = findViewById(R.id.telefone);
+        btn_insert = findViewById(R.id.registrar);
 
 
 
@@ -59,6 +60,7 @@ public class sigin extends AppCompatActivity {
 
         final String nome = txtName.getText().toString().trim();
         final String email = txtEmail.getText().toString().trim();
+        final String telefone = telefone1.getText().toString().trim();
         final String senha = pass.getText().toString().trim();
 
 
@@ -80,7 +82,7 @@ public class sigin extends AppCompatActivity {
 
         else{
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.54/index/register.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://172.16.200.12/index/register.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -118,6 +120,7 @@ public class sigin extends AppCompatActivity {
                     params.put("nome",nome);
                     params.put("email",email);
                     params.put("senha",senha);
+                    params.put("telefone",telefone);
 
 
 

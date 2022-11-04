@@ -3,9 +3,6 @@
     <item android:id="@+id/Home"
         android:icon="@drawable/ic_baseline_home_24"
         android:title=""/>
-    <item android:id="@+id/Procurar"
-        android:icon="@drawable/ic_pesquisar"
-        android:title=""/>
     <item android:id="@+id/Agenda"
         android:icon="@drawable/ic_baseline_menu_book_24"
         android:title=""/>
