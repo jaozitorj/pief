@@ -98,6 +98,7 @@
                 android:layout_width="310dp"
                 android:layout_height="50dp"
                 android:padding="10dp"
+                android:inputType="textPassword"
                 android:layout_gravity="center"
                 android:layout_marginTop="140dp"
                 android:background="@drawable/editlogin02"

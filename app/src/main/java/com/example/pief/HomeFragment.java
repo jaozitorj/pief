@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
         barbeiro2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(requireContext(), servicos.class);
+                Intent intent = new Intent(requireContext(), danieltexeira.class);
                 startActivity(intent);
             }
         });

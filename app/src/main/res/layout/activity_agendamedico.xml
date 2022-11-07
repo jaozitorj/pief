@@ -20,7 +20,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="70dp"
-        android:text="Paulo Henrique"
+        android:text="Pedro Alvez"
         android:textSize="30dp"
         android:translationX="35dp"
         android:textStyle="bold"

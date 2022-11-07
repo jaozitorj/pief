@@ -137,6 +137,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/email1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -156,6 +157,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/senha1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -183,6 +185,7 @@
       android:layout_height="15dp"
       android:background="@drawable/play"
       android:elevation="20dp"
+      android:onClick="login"
       app:layout_constraintBottom_toBottomOf="@+id/login"
       app:layout_constraintEnd_toEndOf="@+id/login"
       app:layout_constraintStart_toStartOf="@+id/login"
@@ -194,6 +197,7 @@
       android:layout_height="wrap_content"
       android:elevation="30dp"
       android:textSize="20dp"
+      android:onClick="moveToRegistration"
       android:text="Criar conta"
       android:textColor="@color/white"
       android:layout_marginTop="30dp"

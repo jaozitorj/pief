@@ -45,13 +45,7 @@ public class sigin extends AppCompatActivity {
             public void onClick(View v) {
 
                 insertData();
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(sigin.this, telainicial.class);
-                        startActivity(intent);
-                    }
-                },5000);
+
             }
         });
     }
@@ -82,7 +76,7 @@ public class sigin extends AppCompatActivity {
 
         else{
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/index/register.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://172.16.200.20/index/register.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -141,15 +135,6 @@ public class sigin extends AppCompatActivity {
 
 
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-    }
-
-
-
 
 
 

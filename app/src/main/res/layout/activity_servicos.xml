@@ -9,10 +9,9 @@
 
     <View
         android:id="@+id/view4"
-        android:layout_width="420dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/menuinicial2"
-        android:translationX="-10dp"
+        android:background="@drawable/shape1"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -20,6 +19,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:text="Paulo Henrique"
+        android:textColor="@color/white"
         android:translationY="-140dp"
         android:textSize="30dp"
         android:translationX="135dp"
@@ -36,7 +36,7 @@
         android:layout_height="40dp"
         android:text="Barbeiro"
         android:textSize="20dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:translationY="-145dp"
         android:translationX="135dp"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
@@ -46,8 +46,8 @@
 
     <ImageButton
         android:id="@+id/voltar"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/ic_baseline_arrow_back_ios_24"
         android:translationX="10dp"
         android:translationY="-280dp"
@@ -70,7 +70,7 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cinza"
+        android:background="@drawable/shape3"
         app:tabTextAppearance="@style/CustomTabLayout"
         android:translationY="-240dp"
         android:elevation="10dp" />
