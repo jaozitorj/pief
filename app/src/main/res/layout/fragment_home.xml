@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="1500dp">
 
-
-
         <TextView
             android:id="@+id/textView15"
             android:layout_width="wrap_content"

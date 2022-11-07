@@ -82,7 +82,7 @@ public class sigin extends AppCompatActivity {
 
         else{
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://172.16.200.12/index/register.php",
+            StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.16/index/register.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
