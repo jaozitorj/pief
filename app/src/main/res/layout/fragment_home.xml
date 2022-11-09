@@ -13,13 +13,14 @@
 
         <TextView
             android:id="@+id/textView15"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="FEED"
             android:textColor="@color/black"
-            android:textSize="50dp"
+            android:textSize="60dp"
+            android:fontFamily="@font/bebasneua"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,13 +32,14 @@
             android:layout_height="wrap_content"
             android:text="Welcome, João"
             android:textSize="20dp"
+            android:fontFamily="@font/italic"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView15"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1500dp"
+            android:layout_height="1100dp"
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <SearchView
@@ -60,6 +62,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/searchView">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10% OFF"
+                android:textColor="@color/white"
+                android:elevation="10dp"
+                android:textSize="40dp"
+                android:fontFamily="@font/bebasneua"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="20dp"/>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -73,6 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="Barbeiros"
+            android:fontFamily="@font/ibmplexbold"
             android:textSize="30dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/cardView4"
@@ -99,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:text="Pedro Alvez"
                 android:textSize="25dp"
+                android:fontFamily="@font/ibmplexbold"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginStart="120dp"
@@ -109,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:text="barbeiro"
                 android:textSize="20dp"
+                android:fontFamily="@font/mediumfont"
                 android:layout_marginTop="45dp"
                 android:layout_marginStart="120dp"/>
 
@@ -135,6 +152,7 @@
                 android:layout_height="wrap_content"
                 android:text="Daniel Texeira"
                 android:textSize="25dp"
+                android:fontFamily="@font/ibmplexbold"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_marginStart="120dp"
@@ -145,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:text="barbeiro"
                 android:textSize="20dp"
+                android:fontFamily="@font/mediumfont"
                 android:layout_marginTop="45dp"
                 android:layout_marginStart="120dp"/>
 

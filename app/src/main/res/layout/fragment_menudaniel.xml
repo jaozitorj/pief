@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menudanielFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="900dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="900dp">
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="380dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/view"
+                android:backgroundTint="@color/cinza"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:text="Informação"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:text="A Barber Shop é única, original, a primeira de Porto Alegre. Desde 1991 a Barber Shop da Independência faz parte do cenário da cidade, cortando o cabelo de homens, mulheres e crianças."
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view7"
+                app:layout_constraintEnd_toEndOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/view"
+                android:backgroundTint="@color/cinza"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contato"
+                android:textSize="18dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view8"
+                app:layout_constraintStart_toStartOf="@+id/view8"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:text="+55 19 994903900"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="250dp"
+                android:layout_height="20dp"
+                android:text="balvindeveloper@gmail.com"
+                android:textSize="18dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_baseline_local_phone_24"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_baseline_email_24"
+                app:layout_constraintStart_toStartOf="@+id/imageView6"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="380dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/view"
+                android:backgroundTint="@color/cinza"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:text="Abre as"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/view9"
+                app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:text="Segunda - Sexta"
+                android:textSize="18dp"
+
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Sábado"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view9"
+                app:layout_constraintStart_toStartOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="08:00 AM - 11:30 AM\n12:30 PM - 18:00 PM"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="50dp"
+                android:text="08:00 AM - 11:30 AM"
+                android:textSize="17dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view9"
+                app:layout_constraintStart_toEndOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <ImageView
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:background="@drawable/editlogin"
+                android:elevation="10dp"
+                android:src="@drawable/mapa"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

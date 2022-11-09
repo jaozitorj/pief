@@ -1,18 +1,13 @@
 package com.example.pief;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,94 +22,59 @@ import java.util.Map;
 
 public class login extends AppCompatActivity {
 
-    EditText email1, senha1;
-    Button login;
-    String str_email,str_password;
-    private String url = "http://172.16.200.20/index/login.php";
+    private EditText etEmail, etPassword;
+    private String email, password;
+    private String URL = "http://172.16.154.101/login/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        email1 = findViewById(R.id.email1);
-        senha1 = findViewById(R.id.senha1);
-
-        login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(login.this, telainicial.class);
-                startActivity(intent);
-            }
-        });
-
+        email = password = "";
+        etEmail = findViewById(R.id.email1);
+        etPassword = findViewById(R.id.senha1);
     }
 
     public void login(View view) {
-
-        if (email1.getText().toString().equals("")) {
-            Toast.makeText(this, "Enter Email", Toast.LENGTH_SHORT).show();
-        } else if (senha1.getText().toString().equals("")) {
-            Toast.makeText(this, "Enter Password", Toast.LENGTH_SHORT).show();
-        } else {
-
-
-            final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setMessage("Por favor espera...");
-
-            progressDialog.show();
-
-           str_email = email1.getText().toString().trim();
-            str_password = senha1.getText().toString().trim();
-
-
-            StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        email = etEmail.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+        if(!email.equals("") && !password.equals("")){
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    progressDialog.dismiss();
-
-                    if (response.equalsIgnoreCase("ingreso correctamente")) {
-
-                        email1.setText("");
-                        senha1.setText("");
-                        startActivity(new Intent(getApplicationContext(),telainicial.class));
-                        Toast.makeText(login.this, response, Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(login.this, response, Toast.LENGTH_SHORT).show();
+                    Log.d("res", response);
+                    if (response.equals("success")) {
+                        Intent intent = new Intent(login.this, telainicial.class);
+                        startActivity(intent);
+                        overridePendingTransition(R.anim.fadein,R.anim.fadeout);
+                    } else if (response.equals("failure")) {
+                        Toast.makeText(login.this, "Invalid Login Id/Password", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             }, new Response.ErrorListener() {
-
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    progressDialog.dismiss();
-                    Toast.makeText(login.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(login.this, error.toString().trim(), Toast.LENGTH_SHORT).show();
                 }
-            }
-
-            ) {
+            }){
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> params = new HashMap<String, String>();
-                    params.put("email", str_email);
-                    params.put("senha", str_password);
-
-                    return params;
-
+                    Map<String, String> data = new HashMap<>();
+                    data.put("email", email);
+                    data.put("password", password);
+                    return data;
                 }
             };
-
-            RequestQueue requestQueue = Volley.newRequestQueue(login.this);
-            requestQueue.add(request);
-
-
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue.add(stringRequest);
+        }else{
+            Toast.makeText(this, "Fields can not be empty!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void moveToRegistration(View view) {
-        startActivity(new Intent(getApplicationContext(), sigin.class));
+    public void register(View view) {
+        Intent intent = new Intent(this, sigin.class);
+        startActivity(intent);
         finish();
     }
 }

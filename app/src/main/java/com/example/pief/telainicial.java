@@ -22,7 +22,6 @@ public class telainicial extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityTelainicialBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
 
         binding.notificacao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +30,9 @@ public class telainicial extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        replaceFragment(new HomeFragment());
+
 
         binding.bottombar.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override

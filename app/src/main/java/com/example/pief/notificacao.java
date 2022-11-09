@@ -14,13 +14,6 @@ public class notificacao extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notificacao);
 
-        ImageButton voltar = findViewById(R.id.voltar);
-        voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(notificacao.this, telainicial.class);
-                startActivity(intent);
-            }
-        });
+
     }
 }

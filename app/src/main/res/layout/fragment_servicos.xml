@@ -1,148 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".servicosFragment">
 
-    <Button
-        android:id="@+id/corte1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:translationY="20dp"
-        android:background="@drawable/editlogin02"/>
-    <Button
-        android:id="@+id/barba"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:translationY="125dp"
-        android:background="@drawable/editlogin02" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/corte2"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:translationY="230dp"
-        android:background="@drawable/editlogin02" />
+        <Button
+            android:id="@+id/corte1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editlogin02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/sobrancelha"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:translationY="335dp"
-        android:background="@drawable/editlogin02" />
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:translationX="280dp"
-        android:translationY="240dp"
-        android:background="@drawable/barbeiro_cabelo"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:background="@drawable/barba2"
-        android:elevation="10dp"
-        android:translationY="135dp"
-        android:translationX="280dp"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:translationX="280dp"
-        android:translationY="30dp"
-        android:background="@drawable/cabelohome"/>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        android:elevation="10dp"
-        android:translationX="280dp"
-        android:translationY="340dp"
-        android:background="@drawable/sobrancelha"/>
+        <Button
+            android:id="@+id/barba"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editlogin02"
+            app:layout_constraintTop_toBottomOf="@+id/corte1" />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Cabelo"
-        android:elevation="10dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:translationY="20dp"
-        android:translationX="20dp"/>
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Barba"
-        android:elevation="10dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:translationY="130dp"
-        android:translationX="20dp"/>
+        <Button
+            android:id="@+id/corte2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editlogin02"
+            app:layout_constraintTop_toBottomOf="@+id/barba" />
 
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="30dp"
-        android:text="Cabelo + Sobrancelha"
-        android:elevation="10dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:translationY="230dp"
-        android:translationX="20dp"/>
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="R$50"
-        android:translationX="20dp"
-        android:translationY="80dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/verde"
-        android:elevation="10dp"/>
+        <Button
+            android:id="@+id/sobrancelha"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editlogin02"
+            app:layout_constraintTop_toBottomOf="@+id/corte2" />
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:elevation="10dp"
-        android:text="R$25"
-        android:textColor="@color/verde"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:translationX="20dp"
-        android:translationY="180dp" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/barbeiro_cabelo"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/corte2"
+            app:layout_constraintTop_toTopOf="@+id/corte2" />
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="R$75"
-        android:translationX="20dp"
-        android:translationY="290dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/verde"
-        android:elevation="10dp"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/barba2"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/barba" />
 
-    <TextView
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        android:text="R$20"
-        android:translationX="20dp"
-        android:translationY="400dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/verde"
-        android:elevation="10dp"/>
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/cabelohome"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/corte1"
+            app:layout_constraintTop_toTopOf="@+id/corte1" />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Sobrancelha"
-        android:elevation="10dp"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:translationY="340dp"
-        android:translationX="20dp"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/sobrancelha"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/sobrancelha"
+            app:layout_constraintTop_toTopOf="@+id/sobrancelha" />
 
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/ibmplexbold"
+            android:text="Cabelo"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="@+id/corte1"
+            app:layout_constraintTop_toTopOf="@+id/corte1" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp"
+            android:text="Barba"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/barba"
+            app:layout_constraintTop_toTopOf="@+id/barba" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:elevation="10dp"
+            android:layout_marginStart="20dp"
+            android:text="Cabelo + Sobrancelha"
+            android:textSize="21dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ibmplexbold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/corte2"
+            app:layout_constraintTop_toTopOf="@+id/corte2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="-10dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/bebasneua"
+            android:text="R$50"
+            android:textColor="@color/verde"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/corte1"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:fontFamily="@font/bebasneua"
+            android:text="R$25"
+            android:textColor="@color/verde"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="@+id/barba"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:text="R$75"
+            android:fontFamily="@font/bebasneua"
+            android:textColor="@color/verde"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/textView29"
+            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:fontFamily="@font/bebasneua"
+            android:text="R$20"
+            android:textColor="@color/verde"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:elevation="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Sobrancelha"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/sobrancelha"
+            app:layout_constraintTop_toTopOf="@+id/sobrancelha" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

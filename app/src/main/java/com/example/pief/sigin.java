@@ -1,14 +1,14 @@
 package com.example.pief;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -23,125 +23,64 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class sigin extends AppCompatActivity {
-    EditText txtName,txtEmail,pass, telefone1;
-    Button btn_insert;
+    private EditText etName, etEmail, etPassword, etReenterPassword;
+    private Button btnRegister;
+    private String URL = "http://172.16.154.101/login/register.php";
+    private String name, email, password, reenterPassword;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sigin);
-
-        txtName     = findViewById(R.id.nome);
-        txtEmail    = findViewById(R.id.email);
-        pass = findViewById(R.id.senha);
-        telefone1 = findViewById(R.id.telefone);
-        btn_insert = findViewById(R.id.registrar);
-
-
-
-
-
-        btn_insert.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                insertData();
-
-            }
-        });
+        etName = findViewById(R.id.etName);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        etReenterPassword = findViewById(R.id.etReenterPassword);
+        btnRegister = findViewById(R.id.registrar);
+        name = email = password = reenterPassword = "";
     }
 
-    private void insertData() {
-
-        final String nome = txtName.getText().toString().trim();
-        final String email = txtEmail.getText().toString().trim();
-        final String telefone = telefone1.getText().toString().trim();
-        final String senha = pass.getText().toString().trim();
-
-
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("cargando...");
-
-        if(nome.isEmpty()){
-
-
-            txtName.setError("complete los campos");
-            return;
+    public void save(View view) {
+        name = etName.getText().toString().trim();
+        email = etEmail.getText().toString().trim();
+        password = etPassword.getText().toString().trim();
+        reenterPassword = etReenterPassword.getText().toString().trim();
+        if(!password.equals(reenterPassword)){
+            Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
         }
-        else if(email.isEmpty()){
+        else if(!name.equals("") && !email.equals("") && !password.equals("")){
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    if (response.equals("success")) {
 
-            txtEmail.setError("complete los campos");
-            return;
-        }
-
-
-        else{
-            progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://172.16.200.20/index/register.php",
-                    new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-
-                            if(response.equalsIgnoreCase("Datos insertados")){
-
-                                Toast.makeText(sigin.this, "Datos insertados", Toast.LENGTH_SHORT).show();
-
-                                progressDialog.dismiss();
-
-                                Intent intent=new Intent(sigin.this,login.class);
-                                startActivity(intent);
-                            }
-                            else{
-                                Toast.makeText(sigin.this, response, Toast.LENGTH_SHORT).show();
-                                progressDialog.dismiss();
-                                Toast.makeText(sigin.this, "No se puede insrtar", Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                    }, new Response.ErrorListener() {
+                        btnRegister.setClickable(false);
+                    } else if (response.equals("failure")) {
+                                            }
+                }
+            }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(sigin.this, error.getMessage(), Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
                 }
-            }
-
-            ){
+            }){
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
-
-                    Map<String,String> params = new HashMap<String,String>();
-
-                    params.put("nome",nome);
-                    params.put("email",email);
-                    params.put("senha",senha);
-                    params.put("telefone",telefone);
-
-
-
-
-                    return params;
+                    Map<String, String> data = new HashMap<>();
+                    data.put("name", name);
+                    data.put("email", email);
+                    data.put("password", password);
+                    return data;
                 }
             };
-
-
-            RequestQueue requestQueue = Volley.newRequestQueue(sigin.this);
-            requestQueue.add(request);
-
-
-
+            RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+            requestQueue.add(stringRequest);
         }
-
-
-
-
     }
 
-
-
-    public  void  login(View v){
-        startActivity(new Intent(getApplicationContext(), login.class));
+    public void login(View view) {
+        Intent intent = new Intent(this, login.class);
+        startActivity(intent);
         finish();
     }
-
-
 }
